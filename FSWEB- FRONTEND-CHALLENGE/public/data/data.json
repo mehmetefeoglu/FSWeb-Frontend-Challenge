@@ -1,0 +1,32 @@
+{
+    "profile": {
+      "name": "Mehmet Efeoğlu",
+      "bio": "Creative thinker Minimalism lover",
+      "birthDate": "24.03.1988",
+      "city": "Aydın",
+      "education": "Lisans, 2015",
+      "skills": ["JavaScript", "React.JS", "Node.JS"],
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim, est doloribus aliquam voluptatum in molestias."
+    },
+    "projects": [
+      {
+        "name": "Workintek",
+        "description": "Açık, kullanıcı dostu, etkili çözümler üreten bir platform.",
+        "github": "https://github.com/workintek",
+        "site": "https://www.workintek.com"
+      },
+      {
+        "name": "Random Jokes",
+        "description": "Rastgele şakalar üreten bir uygulama.",
+        "github": "https://github.com/random-jokes",
+        "site": "https://www.randomjokes.com"
+      },
+      {
+        "name": "Journey",
+        "description": "Kullanıcıların seyahat deneyimlerini paylaştığı bir platform.",
+        "github": "https://github.com/journey",
+        "site": "https://www.journey.com"
+      }
+    ]
+  }
+  

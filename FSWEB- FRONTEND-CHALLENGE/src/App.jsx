@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useContext } from 'react';
+import { DataContext } from './context/DataContext';
+import { ThemeContext } from './context/ThemeContext';
+import Header from './components/Header';
+import Introduction from './components/Introduction';
+import Skills from './components/Skills';
+import Profile from './components/Profile';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { data, loading } = useContext(DataContext);
+  const { language } = useContext(ThemeContext);
+
+  // Veriler yüklenene kadar loading göstergesi
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  // Eğer data veya data.profile undefined ise hata göstermek
+  if (!data || !data.profile) {
+    return <div>Error: Veriler yüklenemedi.</div>;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div
+      className={`min-h-screen ${
+        language === 'en' ? 'bg-white' : 'bg-gray-100'
+      }`}
+    >
+      <Header />
+      <Introduction data={data.profile} />
+      {data.profile.skills && <Skills skills={data.profile.skills} />}
+      <Profile data={data.profile} />
+      <Projects projects={data.projects} />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
