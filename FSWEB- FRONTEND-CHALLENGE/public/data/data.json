@@ -1,32 +1,184 @@
 {
-    "profile": {
-      "name": "Mehmet Efeoğlu",
-      "bio": "Creative thinker Minimalism lover",
-      "birthDate": "24.03.1988",
-      "city": "Aydın",
-      "education": "Lisans, 2015",
-      "skills": ["JavaScript", "React.JS", "Node.JS"],
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim, est doloribus aliquam voluptatum in molestias."
-    },
-    "projects": [
-      {
-        "name": "Workintek",
-        "description": "Açık, kullanıcı dostu, etkili çözümler üreten bir platform.",
-        "github": "https://github.com/workintek",
-        "site": "https://www.workintek.com"
+  "en": [
+    {
+      "profile": {
+        "name": "Mehmet Efeoğlu",
+        "bio": "Creative thinker Minimalism lover",
+        "birthDate": "17.05.1992",
+        "city": "Aydın",
+        "education": "Lisans, 2019",
+        "about": "Mehmet Efeoğlu is a skilled web developer specializing in web development. He focuses on adding value to projects through innovative designs and effective coding. His in-depth knowledge of technologies like HTML, CSS, and JavaScript makes him one of the leading figures in the industry."
       },
-      {
-        "name": "Random Jokes",
-        "description": "Rastgele şakalar üreten bir uygulama.",
-        "github": "https://github.com/random-jokes",
-        "site": "https://www.randomjokes.com"
+      "header": {
+        "skills": "Skills",
+        "projects": "Projects",
+        "hireMe": "Hire me"
       },
-      {
-        "name": "Journey",
-        "description": "Kullanıcıların seyahat deneyimlerini paylaştığı bir platform.",
-        "github": "https://github.com/journey",
-        "site": "https://www.journey.com"
-      }
-    ]
-  }
-  
+      "footer": {
+        "workTogether": "Let’s work together on your next product.",
+        "email": "mehmet.efeogludev@gmail.com",
+        "links": {
+          "blog": "https://personal-blog-link.com",
+          "github": "https://github.com/mehmetefeoglu",
+          "linkedin": "https://www.linkedin.com/in/mehmet-efeo%C4%9Flu-4a04ab187/"
+        },
+        "buttons": {
+          "personalBlog": "Personal Blog",
+          "github": "GitHub",
+          "linkedin": "LinkedIn"
+        }
+      },
+      "introduction": {
+        "about": "Mehmet Efeoğlu is a skilled web developer specializing in web development. He focuses on adding value to projects through innovative designs and effective coding. His in-depth knowledge of technologies like HTML, CSS, and JavaScript makes him one of the leading figures in the industry.",
+        "name": "Mehmet Efeoğlu",
+        "hireMeButton": "Hire Me",
+        "githubButton": "GitHub",
+        "linkedinButton": "LinkedIn",
+        "links": {
+          "github": "https://github.com/mehmetefeoglu",
+          "linkedin": "https://www.linkedin.com/in/mehmet-efeo%C4%9Flu-4a04ab187/"
+        }
+      },
+      "skills": [
+        {
+          "name": "JavaScript",
+          "description": {
+            "en": "JavaScript is a fundamental programming language used to add interactivity to websites. With its advanced features, I can develop dynamic and user-friendly applications. Together with various libraries and frameworks, I can easily create modern web applications using JavaScript.",
+            "tr": "JavaScript, web sitelerine interaktivite eklemek için kullanılan temel bir programlama dilidir. Gelişmiş özellikleri sayesinde, dinamik ve kullanıcı dostu uygulamalar geliştirebilirim. Farklı kütüphaneler ve çerçevelerle birlikte, JavaScript ile modern web uygulamalarını kolaylıkla oluşturabilirim."
+          }
+        },
+        {
+          "name": "React.js",
+          "description": {
+            "en": "React.js is a popular JavaScript library used for building user interfaces. Its component-based architecture allows me to manage complex applications and write more efficient code. I have the ability to develop responsive and performance-oriented web applications using React.",
+            "tr": "React.js, kullanıcı arayüzleri oluşturmak için kullanılan popüler bir JavaScript kütüphanesidir. Bileşen tabanlı yapısı sayesinde, karmaşık uygulamaları yönetmek ve daha verimli kod yazmak benim için mümkündür. React ile responsive ve performans odaklı web uygulamaları geliştirme yeteneğine sahibim."
+          }
+        },
+        {
+          "name": "Node.js",
+          "description": {
+            "en": "Node.js is a powerful platform that allows JavaScript to run on the server side. With its asynchronous and event-driven architecture, I have the ability to develop high-performance and scalable applications. My experience in creating RESTful APIs and developing real-time applications using Node.js enables me to successfully carry out my projects.",
+            "tr": "Node.js, sunucu tarafında JavaScript çalıştırmayı mümkün kılan güçlü bir platformdur. Asenkron ve olay güdümlü yapısı sayesinde, yüksek performanslı ve ölçeklenebilir uygulamalar geliştirme yeteneğim bulunmaktadır. Node.js ile RESTful API'ler oluşturmak ve gerçek zamanlı uygulamalar geliştirmek konusundaki deneyimim sayesinde projelerimi başarıyla yürütüyorum."
+          }
+        }
+      ],
+      "projects": [
+        {
+          "en": {
+            "name": "Workintek",
+            "description": "An open, user-friendly platform that provides effective solutions."
+          },
+          "tr": {
+            "name": "Workintek",
+            "description": "Açık, kullanıcı dostu, etkili çözümler üreten bir platform."
+          },
+          "github": "https://github.com/workintek",
+          "site": "https://www.workintek.com"
+        },
+        {
+          "en": {
+            "name": "PIZZA ORDER",
+            "description": "A site where you can order pizza and select toppings and see the price."
+          },
+          "tr": {
+            "name": "PIZZA ORDER",
+            "description": "Pizza siparişi verilebilen ve müşterinin pizzasında malzeme seçmesine ve ücretini görebilmesini sağlayan bir site."
+          },
+          "github": "https://github.com/mehmetefeoglu/fsweb-s8-challenge-pizza",
+          "site": "https://www.randomjokes.com"
+        }
+      ]
+    }
+  ],
+  "tr": [
+    {
+      "profile": {
+        "name": "Mehmet Efeoğlu",
+        "bio": "Yaratıcı düşünür, Minimalizm tutkunu",
+        "birthDate": "17.05.1992",
+        "city": "Aydın",
+        "education": "Lisans, 2019",
+        "about": "Mehmet Efeoğlu, web geliştirme alanında uzmanlaşmış bir web geliştiricisidir. Yenilikçi tasarımlar ve etkili kodlamasıyla projelere değer katmaya odaklanmaktadır. HTML, CSS ve JavaScript gibi teknolojilerdeki derin bilgisi, onu sektördeki öncü isimlerden biri yapmaktadır."
+      },
+      "header": {
+        "skills": "Yetenekler",
+        "projects": "Projeler",
+        "hireMe": "Beni işe al"
+      },
+      "footer": {
+        "workTogether": "Birlikte bir sonraki ürününüz üzerinde çalışalım.",
+        "email": "mehmet.efeogludev@gmail.com",
+        "links": {
+          "blog": "https://personal-blog-link.com",
+          "github": "https://github.com/mehmetefeoglu",
+          "linkedin": "https://www.linkedin.com/in/mehmet-efeo%C4%9Flu-4a04ab187/"
+        },
+        "buttons": {
+          "personalBlog": "Kişisel Blog",
+          "github": "GitHub",
+          "linkedin": "LinkedIn"
+        }
+      },
+      "introduction": {
+        "about": "Mehmet Efeoğlu, web geliştirme alanında uzmanlaşmış bir web geliştiricisidir. Yenilikçi tasarımlar ve etkili kodlamasıyla projelere değer katmaya odaklanmaktadır. HTML, CSS ve JavaScript gibi teknolojilerdeki derin bilgisi, onu sektördeki öncü isimlerden biri yapmaktadır.",
+        "name": "Mehmet Efeoğlu",
+        "hireMeButton": "Beni işe al",
+        "githubButton": "GitHub",
+        "linkedinButton": "LinkedIn",
+        "links": {
+          "github": "https://github.com/mehmetefeoglu",
+          "linkedin": "https://www.linkedin.com/in/mehmet-efeo%C4%9Flu-4a04ab187/"
+        }
+      },
+      "skills": [
+        {
+          "name": "JavaScript",
+          "description": {
+            "en": "JavaScript is a fundamental programming language used to add interactivity to websites. With its advanced features, I can develop dynamic and user-friendly applications. Together with various libraries and frameworks, I can easily create modern web applications using JavaScript.",
+            "tr": "JavaScript, web sitelerine interaktivite eklemek için kullanılan temel bir programlama dilidir. Gelişmiş özellikleri sayesinde, dinamik ve kullanıcı dostu uygulamalar geliştirebilirim. Farklı kütüphaneler ve çerçevelerle birlikte, JavaScript ile modern web uygulamalarını kolaylıkla oluşturabilirim."
+          }
+        },
+        {
+          "name": "React.js",
+          "description": {
+            "en": "React.js is a popular JavaScript library used for building user interfaces. Its component-based architecture allows me to manage complex applications and write more efficient code. I have the ability to develop responsive and performance-oriented web applications using React.",
+            "tr": "React.js, kullanıcı arayüzleri oluşturmak için kullanılan popüler bir JavaScript kütüphanesidir. Bileşen tabanlı yapısı sayesinde, karmaşık uygulamaları yönetmek ve daha verimli kod yazmak benim için mümkündür. React ile responsive ve performans odaklı web uygulamaları geliştirme yeteneğine sahibim."
+          }
+        },
+        {
+          "name": "Node.js",
+          "description": {
+            "en": "Node.js is a powerful platform that allows JavaScript to run on the server side. With its asynchronous and event-driven architecture, I have the ability to develop high-performance and scalable applications. My experience in creating RESTful APIs and developing real-time applications using Node.js enables me to successfully carry out my projects.",
+            "tr": "Node.js, sunucu tarafında JavaScript çalıştırmayı mümkün kılan güçlü bir platformdur. Asenkron ve olay güdümlü yapısı sayesinde, yüksek performanslı ve ölçeklenebilir uygulamalar geliştirme yeteneğim bulunmaktadır. Node.js ile RESTful API'ler oluşturmak ve gerçek zamanlı uygulamalar geliştirmek konusundaki deneyimim sayesinde projelerimi başarıyla yürütüyorum."
+          }
+        }
+      ],
+      "projects": [
+        {
+          "en": {
+            "name": "Workintek",
+            "description": "An open, user-friendly platform that provides effective solutions."
+          },
+          "tr": {
+            "name": "Workintek",
+            "description": "Açık, kullanıcı dostu, etkili çözümler üreten bir platform."
+          },
+          "github": "https://github.com/workintek",
+          "site": "https://www.workintek.com"
+        },
+        {
+          "en": {
+            "name": "PIZZA ORDER",
+            "description": "A site where you can order pizza and select toppings and see the price."
+          },
+          "tr": {
+            "name": "PIZZA ORDER",
+            "description": "Pizza siparişi verilebilen ve müşterinin pizzasında malzeme seçmesine ve ücretini görebilmesini sağlayan bir site."
+          },
+          "github": "https://github.com/mehmetefeoglu/fsweb-s8-challenge-pizza",
+          "site": "https://www.randomjokes.com"
+        }
+      ]
+    }
+  ]
+}

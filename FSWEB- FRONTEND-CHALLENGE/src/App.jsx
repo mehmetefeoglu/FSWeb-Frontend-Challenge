@@ -9,30 +9,31 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 function App() {
-  const { data, loading } = useContext(DataContext);
+  const { data, loading, error } = useContext(DataContext);
   const { language } = useContext(ThemeContext);
 
-  // Veriler yüklenene kadar loading göstergesi
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // Eğer data veya data.profile undefined ise hata göstermek
-  if (!data || !data.profile) {
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  if (!data || !data[language] || !data[language][0]) {
     return <div>Error: Veriler yüklenemedi.</div>;
   }
 
+  const profileData = data[language][0].profile;
+  const skillsData = data[language][0].skills;  // Burada skills verisini alıyoruz.
+
   return (
-    <div
-      className={`min-h-screen ${
-        language === 'en' ? 'bg-white' : 'bg-gray-100'
-      }`}
-    >
+    <div className={`w-full h-full flex flex-col ${language === 'en' ? 'bg-white' : 'bg-gray-100'}`}>
       <Header />
-      <Introduction data={data.profile} />
-      {data.profile.skills && <Skills skills={data.profile.skills} />}
-      <Profile data={data.profile} />
-      <Projects projects={data.projects} />
+      <Introduction data={profileData} />
+      {skillsData && <Skills skills={skillsData} />} {/* skills verisini buradan alıyoruz */}
+      <Profile data={profileData} />
+      <Projects projects={data[language][0].projects} />
       <Footer />
     </div>
   );

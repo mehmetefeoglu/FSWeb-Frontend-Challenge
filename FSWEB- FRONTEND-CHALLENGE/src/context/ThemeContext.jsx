@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-// ThemeContext oluşturuluyor
+// ThemeContext oluştur
 export const ThemeContext = createContext();
 
 // ThemeProvider bileşeni
