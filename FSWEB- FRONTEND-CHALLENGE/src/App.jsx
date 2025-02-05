@@ -32,8 +32,8 @@ function App() {
     <div className={`w-full h-full flex flex-col ${language === 'en' ? 'bg-white' : 'bg-gray-100'}`}>
       <Header />
       <Introduction data={profileData} />
-      {profileData.skills && <Skills skills={profileData.skills} />}
-      <Profile data={profileData} />
+       <Skills skills={data[language][0].skills} />
+      <Profile data={data[language][0].profile} />
       <Projects projects={data[language][0].projects} />
       <Footer />
       <ToastContainer /> 

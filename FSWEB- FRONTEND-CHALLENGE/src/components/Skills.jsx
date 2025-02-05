@@ -17,7 +17,7 @@ const Skills = () => {
 
   console.log("Data:", data);
   console.log("Language:", language);
-  const skills = data && data[language]?.[0]?.profile?.skills;
+  const skills = data[language]?.[0].skills;
 
   // Eğer skills verisi yoksa, hata göster
   if (!skills || skills.length === 0) {
@@ -26,22 +26,22 @@ const Skills = () => {
   }
 
   return (
-    <section className="my-8">
-      <h2 className="text-3xl font-semibold text-center">
+    <section className="my-8 px-4 mx-24">
+      <h2 className="text-3xl font-semibold text-center mb-6">
         {language === 'en' ? 'Skills' : 'Yetenekler'}
       </h2>
-      <ul className="mt-4 space-y-2">
+      <div className="flex flex-wrap justify-start gap-8">
         {skills.map((skill, index) => (
-          <li key={index} className="border-b py-2 text-lg">
-            <div className="font-semibold">
+          <div key={index} className="flex flex-col items-start w-[200px]">
+            <div className="font-semibold text-xl mb-2">
               {skill.name}
             </div>
-            <p className="mt-2 text-gray-600">
+            <p className="text-gray-600 text-sm text-center">
               {skill.description[language] || "Description not available"}
             </p>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };
