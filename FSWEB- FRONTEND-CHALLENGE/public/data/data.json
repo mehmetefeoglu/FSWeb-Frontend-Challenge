@@ -3,7 +3,7 @@
     {
       "profile": {
         "name": "Mehmet Efeoğlu",
-        "bio": "Creative thinker Minimalism lover",
+        
         "birthDate": "17.05.1992",
         "city": "Aydın",
         "education": "Lisans, 2019",
@@ -29,8 +29,9 @@
         }
       },
       "introduction": {
-        "about": "Mehmet Efeoğlu is a skilled web developer specializing in web development. He focuses on adding value to projects through innovative designs and effective coding. His in-depth knowledge of technologies like HTML, CSS, and JavaScript makes him one of the leading figures in the industry.",
         "name": "Mehmet Efeoğlu",
+        "about": "Mehmet Efeoğlu is a skilled web developer specializing in web development. He focuses on adding value to projects through innovative designs and effective coding. His in-depth knowledge of technologies like HTML, CSS, and JavaScript makes him one of the leading figures in the industry.",
+        "bio": "Creative thinker Minimalism lover",
         "hireMeButton": "Hire Me",
         "githubButton": "GitHub",
         "linkedinButton": "LinkedIn",
@@ -120,8 +121,9 @@
         }
       },
       "introduction": {
-        "about": "Mehmet Efeoğlu, web geliştirme alanında uzmanlaşmış bir web geliştiricisidir. Yenilikçi tasarımlar ve etkili kodlamasıyla projelere değer katmaya odaklanmaktadır. HTML, CSS ve JavaScript gibi teknolojilerdeki derin bilgisi, onu sektördeki öncü isimlerden biri yapmaktadır.",
         "name": "Mehmet Efeoğlu",
+        "about": "Mehmet Efeoğlu, web geliştirme alanında uzmanlaşmış bir web geliştiricisidir. Yenilikçi tasarımlar ve etkili kodlamasıyla projelere değer katmaya odaklanmaktadır. HTML, CSS ve JavaScript gibi teknolojilerdeki derin bilgisi, onu sektördeki öncü isimlerden biri yapmaktadır.",
+       "bio": "Yaratıcı düşünür Minimalizm aşığı",
         "hireMeButton": "Beni işe al",
         "githubButton": "GitHub",
         "linkedinButton": "LinkedIn",

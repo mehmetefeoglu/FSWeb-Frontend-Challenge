@@ -6,24 +6,22 @@ export const DataContext = createContext();
 const DataProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // Hata durumu ekledik
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const jsonData = await fetchData(); // JSON verilerini çekiyoruz
-        console.log('Veri başarıyla alındı:', jsonData); // Konsola veriyi yazdırarak kontrol edebiliriz
-        setData(jsonData);
+        const jsonData = await fetchData(); // API'den veri çekme
+        setData(jsonData); // Veriyi set ediyoruz
       } catch (error) {
-        console.error('Veri yükleme hatası:', error);
-        setError('Veriler yüklenemedi.'); // Hata mesajı set ediyoruz
+        setError('Veriler yüklenemedi.'); // Hata mesajı
       } finally {
-        setLoading(false); // Yükleme bitiyor
+        setLoading(false); // Yükleme tamamlandı
       }
     };
 
-    loadData();
-  }, []);
+    loadData(); // Veri yükleme fonksiyonu
+  }, []); // Burada boş array var, bu da sayfa her yüklendiğinde veri yüklenmesini sağlar
 
   return (
     <DataContext.Provider value={{ data, loading, error }}>

@@ -1,28 +1,30 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
-// ThemeContext oluştur
+// Varsayılan tema ve dil
+const defaultTheme = localStorage.getItem('theme') || 'light';
+const defaultLanguage = localStorage.getItem('language') || 'en';
+
 export const ThemeContext = createContext();
 
-// ThemeProvider bileşeni
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light'); // Varsayılan tema 'light'
-  const [language, setLanguage] = useState('tr'); // Varsayılan dil 'tr'
+  const [theme, setTheme] = useState(defaultTheme);
+  const [language, setLanguage] = useState(defaultLanguage);
 
-  // Tema değiştirme fonksiyonu
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark'); // Tema 'dark' ise 'light' yap, değilse 'dark' yap
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme); // Tema tercihini kaydet
   };
 
-  // Dil değiştirme fonksiyonu
   const toggleLanguage = () => {
-    setLanguage(language === 'tr' ? 'en' : 'tr'); // Dil 'tr' ise 'en', değilse 'tr' yap
+    const newLanguage = language === 'en' ? 'tr' : 'en';
+    setLanguage(newLanguage);
+    localStorage.setItem('language', newLanguage); // Dil tercihini kaydet
   };
 
   return (
-    <ThemeContext.Provider
-      value={{ theme, toggleTheme, language, toggleLanguage }}
-    >
-      <div className={theme === 'dark' ? 'dark' : ''}>{children}</div>
+    <ThemeContext.Provider value={{ theme, toggleTheme, language, toggleLanguage }}>
+      {children}
     </ThemeContext.Provider>
   );
 };

@@ -7,34 +7,36 @@ import Skills from './components/Skills';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const { data, loading, error } = useContext(DataContext);
-  const { language } = useContext(ThemeContext);
+  const { data, loading, error } = useContext(DataContext); // DataContext'ten veri alıyoruz
+  const { language } = useContext(ThemeContext); // Tema için dil bilgisi
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>; // Yükleniyor durumu
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return <div>{error}</div>; // Hata mesajı
   }
 
   if (!data || !data[language] || !data[language][0]) {
-    return <div>Error: Veriler yüklenemedi.</div>;
+    return <div>Error: Veriler yüklenemedi.</div>; // Veriler gelmezse hata mesajı
   }
 
   const profileData = data[language][0].profile;
-  const skillsData = data[language][0].skills;  // Burada skills verisini alıyoruz.
 
   return (
     <div className={`w-full h-full flex flex-col ${language === 'en' ? 'bg-white' : 'bg-gray-100'}`}>
       <Header />
       <Introduction data={profileData} />
-      {skillsData && <Skills skills={skillsData} />} {/* skills verisini buradan alıyoruz */}
+      {profileData.skills && <Skills skills={profileData.skills} />}
       <Profile data={profileData} />
       <Projects projects={data[language][0].projects} />
       <Footer />
+      <ToastContainer /> 
     </div>
   );
 }

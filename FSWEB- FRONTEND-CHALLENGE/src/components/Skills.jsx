@@ -1,11 +1,28 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext';  // ThemeContext'i import ediyoruz
+import { DataContext } from '../context/DataContext';
+import { ThemeContext } from '../context/ThemeContext';
 
-const Skills = ({ skills }) => {
-  const { language } = useContext(ThemeContext);  // Dil bilgisini alıyoruz.
+const Skills = () => {
+  const { data, loading, error } = useContext(DataContext);  // DataContext'ten gelen veriler
+  const { language } = useContext(ThemeContext);  // Dil bilgisi
 
+  // Veriler yüklenene kadar bekleme
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>; // Hata durumu
+  }
+
+  console.log("Data:", data);
+  console.log("Language:", language);
+  const skills = data && data[language]?.[0]?.profile?.skills;
+
+  // Eğer skills verisi yoksa, hata göster
   if (!skills || skills.length === 0) {
-    return <div>No skills available.</div>;  // Eğer skills verisi yoksa, bir uyarı gösteririz
+    console.log("Skills data is not available.");
+    return <div>{language === 'en' ? "Skills data could not be loaded." : "Yetenekler verisi yüklenemedi."}</div>;
   }
 
   return (
@@ -16,9 +33,11 @@ const Skills = ({ skills }) => {
       <ul className="mt-4 space-y-2">
         {skills.map((skill, index) => (
           <li key={index} className="border-b py-2 text-lg">
-            <div className="font-semibold">{skill.name}</div>
+            <div className="font-semibold">
+              {skill.name}
+            </div>
             <p className="mt-2 text-gray-600">
-              {skill.description[language]} {/* Burada dil seçimine göre açıklamayı alıyoruz */}
+              {skill.description[language] || "Description not available"}
             </p>
           </li>
         ))}
