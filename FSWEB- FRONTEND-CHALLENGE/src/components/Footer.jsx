@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import { DataContext } from '../context/DataContext';  // DataContext'ten veri alıyoruz
+import { DataContext } from '../context/DataContext';  
 
 const Footer = () => {
   const { language, theme } = useContext(ThemeContext);  // Dil tercihi ve tema bilgisi

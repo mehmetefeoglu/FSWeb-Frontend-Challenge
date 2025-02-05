@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import { DataContext } from '../context/DataContext';  // DataContext'ten veri alacağız
+import { DataContext } from '../context/DataContext';  
 
 const Profile = () => {
   const { language } = useContext(ThemeContext);  // Dil tercihi
